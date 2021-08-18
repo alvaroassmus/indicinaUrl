@@ -1,0 +1,26 @@
+{
+  "name": "indicinaUrl",
+  "version": "1.0.0",
+  "description": "<p style=\"text-align: center;\">\r   <img alt=\"logo\" src=\"https://raw.githubusercontent.com/alvaroassmus/indicinaUrl/master/docs/assets/indicina.png\" width=\"200\">\r </p>\r <div style=\"text-align: center; width: 100%;\"> \r   <h1>Indicina URL lab</h1>\r </div>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvaroassmus/indicinaUrl.git"
+  },
+  "keywords": [],
+  "author": "alvaro.assmus@bairesdev.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvaroassmus/indicinaUrl/issues"
+  },
+  "homepage": "https://github.com/alvaroassmus/indicinaUrl#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
