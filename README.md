@@ -86,12 +86,7 @@ To deploy the project you must follow the next steps:
 
 After you deploy the project you can test the REST API with the following command:
 
-`ng run test`
-
-It should give you the following result:
-
-```
-```
+`npm run test`
 
 ## About the developer
 
