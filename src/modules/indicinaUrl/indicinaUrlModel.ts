@@ -9,4 +9,8 @@ exports.encodeUrl = (indicinaUrls: Map<string, IndicinaUrlDTO>, originalUrl: str
     indicinaUrlDTO.originalUrl = originalUrl;
     indicinaUrls.set(shortUrl, indicinaUrlDTO);
     return serverUrl.concat(shortUrl);
-}
+};
+
+exports.findShortUrl = (shortUrl: string, indicinaUrls: Map<string, IndicinaUrlDTO>) => {
+    return <IndicinaUrlDTO>indicinaUrls.get(shortUrl);
+};

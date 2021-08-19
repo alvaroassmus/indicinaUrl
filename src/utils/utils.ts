@@ -1,5 +1,3 @@
-import {IndicinaUrlDTO} from "../modules/indicinaUrl/IndicinaUrlDTO";
-
 export class Utils {
 
     constructor() {
@@ -12,9 +10,5 @@ export class Utils {
 
     public static generateShortUrl(seed: number): string {
         return seed + "TodoGud";
-    }
-
-    public static findShortUrl(shortUrl: string, indicinaUrls: Map<string, IndicinaUrlDTO>): IndicinaUrlDTO {
-        return <IndicinaUrlDTO>indicinaUrls.get(shortUrl);
     }
 }
