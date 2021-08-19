@@ -6,7 +6,7 @@ Return basic stat of a short URL path. In this basic stats you will find how man
 
 * **URL**
 
-  /statistic/:shortUrl
+  /statistic/shortUrl
 
 * **Method:**
 
@@ -19,7 +19,7 @@ Return basic stat of a short URL path. In this basic stats you will find how man
 * **Success Response:**
 
     * **Code:** 200 <br />
-      **Content:** `{ data : Object { used: #, date: dateTime }, msg : "The statistics for the URL" }`
+      **Content:** `{ statistic : { timesUsed: #, date: dateTime }, msg : "The statistics for the URL" }`
 
 * **Error Response:**
 

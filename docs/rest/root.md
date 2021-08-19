@@ -6,7 +6,7 @@ Returns the redirection for the user when uses a shortUrl
 
 * **URL**
 
-  /:shortUrl
+  /shortUrl
 
 * **Method:**
 

@@ -49,10 +49,10 @@ This way if the project grows, the developer will add modules and in each module
 
     This layer contains the REST API for the project, they are located in the <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/indicinaUrlModule/indicinaUrlRoutes.ts" target="_blank">indicinaUrlRoutes.ts</a> file. 
     You can read each REST API method documentation in the following list:
-      - [/encode/:url](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/encode.md)
-      - [/decode/:shortUrl](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/decode.md)
-      - [/statistic/:shortUrl](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/statistic.md)
-      - [/root/:shortUrl](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/root.md)
+      - [/encode/url](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/encode.md)
+      - [/decode/shortUrl](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/decode.md)
+      - [/statistic/shortUrl](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/statistic.md)
+      - [/root/shortUrl](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/root.md)
 
   * **CONTROLLER**
 

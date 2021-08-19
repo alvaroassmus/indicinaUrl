@@ -6,7 +6,7 @@ Encodes a URL to a shortened URL
 
 * **URL**
 
-  /encode/:url
+  /encode/url
 
 * **Method:**
 
@@ -19,7 +19,7 @@ Encodes a URL to a shortened URL
 * **Success Response:**
 
     * **Code:** 200 <br />
-      **Content:** `{ data : string { urlEncoded }, msg : "Url has been encoded" }`
+      **Content:** `{ urlEncoded : "urlEncoded", msg : "Url has been encoded" }`
 
 * **Error Response:**
 

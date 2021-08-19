@@ -6,7 +6,7 @@ Decodes a shortened URL to its original URL
 
 * **URL**
 
-  /decode/:shortUrl
+  /decode/shortUrl
 
 * **Method:**
 
@@ -19,7 +19,7 @@ Decodes a shortened URL to its original URL
 * **Success Response:**
 
     * **Code:** 200 <br />
-      **Content:** `{ data : string { urlDecoded }, msg : "Url has been decoded" }`
+      **Content:** `{ urlDecoded : "urlDecoded", msg : "Url has been decoded" }`
 
 * **Error Response:**
 
