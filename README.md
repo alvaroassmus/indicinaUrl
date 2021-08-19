@@ -60,9 +60,12 @@ This way if the project grows, the developer will add modules and in each module
 
   * **MODEL**
 
+    For mantaining the Urls in memory you will find a Map<string, IndicinaUrlModel> in <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/src/modules/indicinaUrl/indicinaUrlController.ts" target="_blank">indicinaUrlController.ts</a> called indicinaUrls
+
     The data layer located in the <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/src/modules/indicinaUrl/indicinaUrlModel.ts" target="_blank">indicinaUrlModel.ts</a> contains:
-      - <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/src/modules/indicinaUrl/indicinaUrl.ts" target="_blank">indicinaUrl.ts</a>: Used to transport an url from layer to layer.
-      - Array< indicinaUrl >: An array that contains the memory persistence of the lab with all the URLs.
+      - original Url
+      - times that Url has been used
+      - the last time the Url has been used
       
 ## Software requirements
 
@@ -82,13 +85,15 @@ To deploy the project you must follow the next steps:
 6. Use each of the API REST as defined in their docs.
 7. Enjoy.
 
-## Unit and Feature Testing
+## MOCHA Testing
 
 After you deploy the project you can test the REST API with the following command:
 
 `npm run test`
 
-IMPORTANT: remember to have the server UP ;)
+All the tests are located in the <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/src/test" target="_blank">TESTS</a> folder. 
+
+IMPORTANT: remember to have the server UP and RUNNING ;)
 
 ## About the developer
 
