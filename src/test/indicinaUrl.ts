@@ -50,4 +50,19 @@ describe("IndicinaURL API", () => {
             });
         });
     });
+    describe("Decode Error Response", () => {
+        let url = "http://localhost:3000/decode/";
+        it("returns status 400", (done) => {
+            request(url, (error, response) => {
+                expect(response.statusCode).to.equal(400);
+                done();
+            });
+        });
+        it("{ ERR-MSG : \"The shortUrl does not exist in the system\" }", (done) => {
+            request(url, (error, response, body) => {
+                expect(JSON.parse(body)['ERR-MSG']).to.equal("The shortUrl does not exist in the system");
+                done();
+            });
+        });
+    });
 });
