@@ -20,3 +20,20 @@ describe("IndicinaURL API", () => {
         });
     });
 });
+describe("IndicinaURL API", () => {
+    describe("Encode Error Response", () => {
+        let url = "http://localhost:3000/encode/";
+        it("returns status 400", (done) => {
+            request(url, (error, response) => {
+                expect(response.statusCode).to.equal(400);
+                done();
+            });
+        });
+        it("{ ERR-MSG : \"The url must have the correct structure\" }", (done) => {
+            request(url, (error, response, body) => {
+                expect(JSON.parse(body)['ERR-MSG']).to.equal("The url must have the correct structure");
+                done();
+            });
+        });
+    });
+});
