@@ -5,5 +5,6 @@ let indicinaUrlController = require('./indicinaUrlController');
 
 router.get('/encode/*', indicinaUrlController.encodeUrl);
 router.get('/decode/*', indicinaUrlController.decodeUrl);
+router.get('/statistic/*', indicinaUrlController.getUrlUses);
 
 module.exports = router;

@@ -22,12 +22,32 @@ exports.decodeUrl = (req, res) => {
     let response = {'ERR-MSG': "The shortUrl does not exist in the system"};
     res.status(400);
     if (indicinaUrls.size > 0) {
-        const indicinaUrlDTO: IndicinaUrlDTO = Utils.findShortUrl(req.params[0], indicinaUrls);
+        const indicinaUrlDTO: IndicinaUrlDTO = indicinaUrlModel.findShortUrl(req.params[0], indicinaUrls);
         if (indicinaUrlDTO) {
             response = {
                 // @ts-ignore
                 urlDecoded: indicinaUrlDTO.originalUrl,
                 msg: "Url has been decoded"
+            };
+            res.status(200);
+        }
+    }
+    res.json(response);
+};
+
+exports.getUrlUses = (req, res) => {
+    let response = {'ERR-MSG': "The shortUrl does not exist in the system"};
+    res.status(400);
+    if (indicinaUrls.size > 0) {
+        const indicinaUrlDTO: IndicinaUrlDTO = indicinaUrlModel.findShortUrl(req.params[0], indicinaUrls);
+        if (indicinaUrlDTO) {
+            response = {
+                // @ts-ignore
+                statistic: {
+                    timesUsed: indicinaUrlDTO.timesUsed,
+                    date: new Date(indicinaUrlDTO.lastTimeUsed)
+                },
+                msg: "The statistics for the URL"
             };
             res.status(200);
         }
