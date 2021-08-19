@@ -40,7 +40,7 @@ describe("IndicinaURL API", () => {
     describe("Statistic Success Response", () => {
         let url = "http://localhost:3000/statistic/1TodoGud";
         returnCodeTest(url, 200);
-        it("Content: { statistic : { timesUsed: #, date: dateTime }, msg : \"The statistics for the URL\" }", (done) => {
+        it("Content: { statistic : { originalUrl: string, timesUsed: #, date: dateTime }, msg : \"The statistics for the URL\" }", (done) => {
             request(url, (error, response, body) => {
                 expect(JSON.parse(body).statistic).to.be.a('object');
                 expect(JSON.parse(body).msg).to.equal("The statistics for the URL");

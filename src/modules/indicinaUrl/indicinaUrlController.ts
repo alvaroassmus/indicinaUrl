@@ -44,6 +44,7 @@ exports.getUrlUses = (req, res) => {
             response = {
                 // @ts-ignore
                 statistic: {
+                    originalUrl: indicinaUrlDTO.originalUrl,
                     timesUsed: indicinaUrlDTO.timesUsed,
                     date: new Date(indicinaUrlDTO.lastTimeUsed)
                 },
