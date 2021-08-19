@@ -19,8 +19,6 @@ describe("IndicinaURL API", () => {
             });
         });
     });
-});
-describe("IndicinaURL API", () => {
     describe("Encode Error Response", () => {
         let url = "http://localhost:3000/encode/";
         it("returns status 400", (done) => {
@@ -32,6 +30,22 @@ describe("IndicinaURL API", () => {
         it("{ ERR-MSG : \"The url must have the correct structure\" }", (done) => {
             request(url, (error, response, body) => {
                 expect(JSON.parse(body)['ERR-MSG']).to.equal("The url must have the correct structure");
+                done();
+            });
+        });
+    });
+    describe("Decode Success Response", () => {
+        let url = "http://localhost:3000/decode/1TodoGud";
+        it("returns status 200", (done) => {
+            request(url, (error, response) => {
+                expect(response.statusCode).to.equal(200);
+                done();
+            });
+        });
+        it("Content: { urlDecoded : \"urlDecoded\", msg : \"Url has been decoded\" }", (done) => {
+            request(url, (error, response, body) => {
+                expect(JSON.parse(body).urlDecoded).to.be.a('string');
+                expect(JSON.parse(body).msg).to.equal("Url has been decoded");
                 done();
             });
         });
