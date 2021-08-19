@@ -47,7 +47,7 @@ This way if the project grows, the developer will add modules and in each module
 
   * **ROUTES**
 
-    This layer contains the REST API for the project, they are located in the <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/indicinaUrlModule/indicinaUrlRoutes.ts" target="_blank">indicinaUrlRoutes.ts</a> file. 
+    This layer contains the REST API for the project, they are located in the <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/src/modules/indicinaUrl/indicinaUrlRoutes.ts" target="_blank">indicinaUrlRoutes.ts</a> file. 
     You can read each REST API method documentation in the following list:
       - [/encode/url](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/encode.md)
       - [/decode/shortUrl](https://github.com/alvaroassmus/indicinaUrl/blob/master/docs/rest/decode.md)
@@ -56,12 +56,12 @@ This way if the project grows, the developer will add modules and in each module
 
   * **CONTROLLER**
 
-    The logic layer located in the <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/indicinaUrlModule/indicinaUrlController.ts" target="_blank">indicinaUrlController.ts</a>. This file contains the functions to encode, decode and calculate the statistics of the URLs.  
+    The logic layer located in the <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/src/modules/indicinaUrl/indicinaUrlController.ts" target="_blank">indicinaUrlController.ts</a>. This file contains the functions to encode, decode and calculate the statistics of the URLs.  
 
   * **MODEL**
 
-    The data layer located in the <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/indicinaUrlModule/indicinaUrlModel.ts" target="_blank">indicinaUrlModel.ts</a> contains:
-      - <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/indicinaUrlModule/indicinaUrl.ts" target="_blank">indicinaUrl.ts</a>: Used to transport an url from layer to layer.
+    The data layer located in the <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/src/modules/indicinaUrl/indicinaUrlModel.ts" target="_blank">indicinaUrlModel.ts</a> contains:
+      - <a href="https://github.com/alvaroassmus/indicinaUrl/blob/master/src/modules/indicinaUrl/indicinaUrl.ts" target="_blank">indicinaUrl.ts</a>: Used to transport an url from layer to layer.
       - Array< indicinaUrl >: An array that contains the memory persistence of the lab with all the URLs.
       
 ## Software requirements
