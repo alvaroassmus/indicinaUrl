@@ -1,5 +1,11 @@
 [Go Back](https://github.com/alvaroassmus/indicinaUrl#readme)
 
+## Software requirements
+
+- NPM
+- REST TESTER (Ex. postman)
+- BROWSER
+
 ## NODE Deploying
 
 To deploy the project you must follow the next steps:

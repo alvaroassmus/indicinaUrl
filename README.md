@@ -66,12 +66,6 @@ This way if the project grows, the developer will add modules and in each module
       - original Url
       - times that Url has been used
       - the last time the Url has been used
-      
-## Software requirements
-
-- NPM
-- REST TESTER (Ex. postman)
-- BROWSER
 
 ## Deploying and Running Mocha tests
 
