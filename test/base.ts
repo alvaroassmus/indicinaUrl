@@ -1,3 +1,4 @@
+/*// @ts-ignore
 let expect = require("chai").expect;
 
 describe("Your test text", function () {
@@ -7,4 +8,4 @@ describe("Your test text", function () {
             expect(theValue).to.equal(1);
         });
     });
-});
+});*/
