@@ -88,6 +88,8 @@ After you deploy the project you can test the REST API with the following comman
 
 `npm run test`
 
+IMPORTANT: remember to have the server UP ;)
+
 ## About the developer
 
 Alvaro Assmus Nassar (me) - fullstack software engineer with more than 14 years of experience developing software, also a dad and a musician. I love life and learning. 
