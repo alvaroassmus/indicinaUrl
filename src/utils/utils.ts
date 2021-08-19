@@ -1,4 +1,4 @@
-import {IndicinaUrlModel} from "../modules/indicinaUrl/indicinaUrlModel";
+import {IndicinaUrlDTO} from "../modules/indicinaUrl/IndicinaUrlDTO";
 
 export class Utils {
 
@@ -14,7 +14,7 @@ export class Utils {
         return seed + "TodoGud";
     }
 
-    public static findShortUrl(shortUrl: string, indicinaUrls: Map<string, IndicinaUrlModel>): IndicinaUrlModel {
-        return <IndicinaUrlModel>indicinaUrls.get(shortUrl);
+    public static findShortUrl(shortUrl: string, indicinaUrls: Map<string, IndicinaUrlDTO>): IndicinaUrlDTO {
+        return <IndicinaUrlDTO>indicinaUrls.get(shortUrl);
     }
 }

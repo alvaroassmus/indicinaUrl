@@ -1,9 +1,12 @@
-export class IndicinaUrlModel extends Object {
-    public originalUrl: string = "";
-    public timesUsed: number = 0;
-    public lastTimeUsed: string = "";
+import {IndicinaUrlDTO} from "./IndicinaUrlDTO";
+import {Utils} from "../../utils/utils";
 
-    constructor() {
-        super();
-    }
+const serverUrl = "http://localhost:3000/";
+
+exports.encodeUrl = (indicinaUrls: Map<string, IndicinaUrlDTO>, originalUrl: string) => {
+    let indicinaUrlDTO: IndicinaUrlDTO = new IndicinaUrlDTO();
+    let shortUrl = Utils.generateShortUrl(indicinaUrls.size + 1);
+    indicinaUrlDTO.originalUrl = originalUrl;
+    indicinaUrls.set(shortUrl, indicinaUrlDTO);
+    return serverUrl.concat(shortUrl);
 }
