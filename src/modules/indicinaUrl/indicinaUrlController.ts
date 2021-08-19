@@ -46,7 +46,7 @@ exports.getUrlUses = (req, res) => {
                 statistic: {
                     originalUrl: indicinaUrlDTO.originalUrl,
                     timesUsed: indicinaUrlDTO.timesUsed,
-                    date: new Date(indicinaUrlDTO.lastTimeUsed)
+                    lastDateUsed: new Date(indicinaUrlDTO.lastTimeUsed)
                 },
                 msg: "The statistics for the URL"
             };
@@ -54,4 +54,20 @@ exports.getUrlUses = (req, res) => {
         }
     }
     res.json(response);
+};
+
+exports.redirectToOriginalUrl = (req, res) => {
+    let response = {'ERR-MSG': "The shortUrl does not exist in the system"};
+    res.status(400);
+    if (indicinaUrls.size > 0) {
+        const indicinaUrlDTO: IndicinaUrlDTO = indicinaUrlModel.updateShortUrlUse(req.params[0], indicinaUrls);
+        if (indicinaUrlDTO) {
+            res.status(200);
+            res.redirect(indicinaUrlDTO.originalUrl);
+        } else {
+            res.json(response);
+        }
+    } else {
+        res.json(response);
+    }
 };

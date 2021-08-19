@@ -19,7 +19,7 @@ Return basic stat of a short URL path. In this basic stats you will find how man
 * **Success Response:**
 
     * **Code:** 200 <br />
-      **Content:** `{ statistic : { originalUrl: string, timesUsed: #, date: dateTime }, msg : "The statistics for the URL" }`
+      **Content:** `{ statistic : { originalUrl: string, timesUsed: #, lastDateUsed: dateTime }, msg : "The statistics for the URL" }`
 
 * **Error Response:**
 

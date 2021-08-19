@@ -3,7 +3,6 @@ import {Utils} from "../utils/utils";
 import {IndicinaUrlDTO} from "../modules/indicinaUrl/IndicinaUrlDTO";
 
 let expect = require("chai").expect;
-let indicinaUrlModel = require("../modules/indicinaUrl/indicinaUrlModel");
 
 describe("IndicinaURL UTILS", () => {
     describe("Utils.isValidURL", () => {
@@ -28,11 +27,11 @@ describe("IndicinaURL UTILS", () => {
     });
     describe("Utils.findShortUrl", () => {
         it("returns IndicinaUrlModel for shortUrl", () => {
-            let url = "https://www.google.com";
+            let indicinaUrlModel = require("../modules/indicinaUrl/indicinaUrlModel");
             let indicinaUrls: Map<string, IndicinaUrlDTO> = new Map<string, IndicinaUrlDTO>();
             let indicinaUrlDTO: IndicinaUrlDTO = new IndicinaUrlDTO();
             let shortUrl = Utils.generateShortUrl(1);
-            indicinaUrlDTO.originalUrl = url;
+            indicinaUrlDTO.originalUrl = "https://www.google.com";
             indicinaUrls.set(shortUrl, indicinaUrlDTO);
             let resultIndicinaUrlModel: IndicinaUrlDTO = indicinaUrlModel.findShortUrl(shortUrl, indicinaUrls);
             expect(resultIndicinaUrlModel).to.be.a('object');

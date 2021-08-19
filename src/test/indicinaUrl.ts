@@ -1,4 +1,5 @@
 // @ts-ignore
+import {IndicinaUrlDTO} from "../modules/indicinaUrl/IndicinaUrlDTO";
 let expect = require("chai").expect;
 let request = require("request");
 
@@ -40,7 +41,7 @@ describe("IndicinaURL API", () => {
     describe("Statistic Success Response", () => {
         let url = "http://localhost:3000/statistic/1TodoGud";
         returnCodeTest(url, 200);
-        it("Content: { statistic : { originalUrl: string, timesUsed: #, date: dateTime }, msg : \"The statistics for the URL\" }", (done) => {
+        it("Content: { statistic : { originalUrl: string, timesUsed: #, lastDateUsed: dateTime }, msg : \"The statistics for the URL\" }", (done) => {
             request(url, (error, response, body) => {
                 expect(JSON.parse(body).statistic).to.be.a('object');
                 expect(JSON.parse(body).msg).to.equal("The statistics for the URL");
@@ -50,6 +51,21 @@ describe("IndicinaURL API", () => {
     });
     describe("Statistic Error Response", () => {
         const url = "http://localhost:3000/statistic/";
+        const errMsg = "The shortUrl does not exist in the system";
+        returnCodeTest(url, 400);
+        errorMessageTest(url, errMsg);
+    });
+    describe("Using ShortUrl Success Response", () => {
+        let url = "http://localhost:3000/1TodoGud";
+        returnCodeTest(url, 200);
+        it('redirects to the Original URL', done => {
+            request(url, (error, response) => {
+                done();
+            });
+        });
+    });
+    describe("Using ShortUrl Error Response", () => {
+        const url = "http://localhost:3000/";
         const errMsg = "The shortUrl does not exist in the system";
         returnCodeTest(url, 400);
         errorMessageTest(url, errMsg);

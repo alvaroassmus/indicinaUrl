@@ -14,3 +14,12 @@ exports.encodeUrl = (indicinaUrls: Map<string, IndicinaUrlDTO>, originalUrl: str
 exports.findShortUrl = (shortUrl: string, indicinaUrls: Map<string, IndicinaUrlDTO>) => {
     return <IndicinaUrlDTO>indicinaUrls.get(shortUrl);
 };
+
+exports.updateShortUrlUse = (shortUrl: string, indicinaUrls: Map<string, IndicinaUrlDTO>) => {
+    let indicinaUrlDTO: IndicinaUrlDTO =  <IndicinaUrlDTO>indicinaUrls.get(shortUrl);
+    if (indicinaUrlDTO) {
+        indicinaUrlDTO.timesUsed += 1;
+        indicinaUrlDTO.lastTimeUsed = new Date().toString();
+    }
+    return indicinaUrlDTO;
+};
